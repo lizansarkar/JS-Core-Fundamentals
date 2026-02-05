@@ -5,11 +5,11 @@ console.log(1 + "20" + 3 + "20");
 console.log("5" - 2);
 // The minus operator forces numeric conversion, so the string "5" is converted to a number.
 // problem 3
-// console.log("5" + 2 - 1);
+console.log("5" + 2 - 1);
 // problem 4
-// console.log(true + true + false);
+console.log(true + true + false);
 // problem 5
-// console.log([] + []);
+console.log([] + []);
 // problem 6
 // console.log([] + {});
 // problem 7
