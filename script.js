@@ -6,18 +6,26 @@ console.log("5" - 2);
 // The minus operator forces numeric conversion, so the string "5" is converted to a number.
 // problem 3
 console.log("5" + 2 - 1);
+// The plus operator performs string concatenation first, then the minus operator forces numeric conversion.
 // problem 4
 console.log(true + true + false);
+// In numeric operations, JavaScript converts booleans into numbers.
 // problem 5
 console.log([] + []);
+// Empty arrays are converted to empty strings during string concatenation.
 // problem 6
-// console.log([] + {});
+console.log([] + {});
+// JavaScript may treat an empty object as a block, and the unary plus converts the array into a number.
 // problem 7
-// console.log(null + 1);
+console.log(null + 1);
+// Null is converted to zero in numeric operations.
 // problem 8
-// console.log(undefined + 1);
+console.log(undefined + 1);
+// Null is converted to zero in numeric operations.
 // problem 9
-// console.log("10" * "2");
+console.log("10" * "2");
+// The multiply operator always converts strings into numbers.
 // problem 10
-// console.log(0 == false);
-// console.log(0 === false);
+console.log(0 == false);
+console.log(0 === false);
+// These outputs occur due to JavaScript’s implicit type coercion and operator behavior.
