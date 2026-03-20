@@ -5,7 +5,7 @@
 // Expected Output: "olleh"
 
 function reverseString(str) {
-    // TODO: write your logic here
+    return str.split("").reverse().join("");
 }
 
 console.log(reverseString("hello")); // "olleh"
@@ -99,62 +99,7 @@ console.log(findUnique([1,1,2,3,3,4]));
 // Expected Output: 4
 
 function countWords(str) {
-    // TODO
+    return str.split(" ").length;
 }
 
-console.log(countWords("Hello world from JavaScript")); // 4
-
-// *********** Problem: 11
-
-// Input: [0, 1, false, 2, "", 3]
-// Expected Output: [1, 2, 3]
-
-function removeFalsy(arr) {
-    // TODO
-}
-
-console.log(removeFalsy([0, 1, false, 2, "", 3]));
-
-// *********** Problem: 12
-
-// Input: "I love JavaScript programming"
-// Expected Output: "programming"
-
-function longestWord(str) {
-    // TODO
-}
-
-console.log(longestWord("I love JavaScript programming"));
-
-// *********** Problem: 13
-
-// Input: [1, [2, [3, 4], 5]]
-// Expected Output: [1, 2, 3, 4, 5]
-
-function flattenArray(arr) {
-    // TODO
-}
-
-console.log(flattenArray([1, [2, [3, 4], 5]]));
-
-// *********** Problem: 14
-
-// Input: [1, 2, 4, 5]
-// Expected Output: 3
-
-function findMissingNumber(arr) {
-    // TODO
-}
-
-console.log(findMissingNumber([1, 2, 4, 5])); // 3
-
-// *********** Problem: 15
-
-// Input: 7
-// Expected Output: true
-
-function isPrime(num) {
-    // TODO
-}
-
-console.log(isPrime(7)); // true
+console.log(countWords("Hello world from JavaScript"));
