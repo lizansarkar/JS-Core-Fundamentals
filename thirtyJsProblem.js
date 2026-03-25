@@ -103,3 +103,52 @@ function countWords(str) {
 }
 
 console.log(countWords("Hello world from JavaScript"));
+
+
+// *********** Problem: 11
+// Input: "JavaScript"
+// Expected Output: { J: 1, a: 2, v: 1, S: 1, c: 1, r: 1, i: 1, p: 1, t: 1 }
+
+function countCharacterFrequency(str) {
+    const frequency = {};
+    for (let char of str) {
+        frequency[char] = (frequency[char] || 0) + 1;
+    }
+    return frequency;
+}
+
+console.log(countCharacterFrequency("JavaScript"));
+
+// *********** Problem: 12
+// Input: "IV"
+// Expected Output: 4
+
+
+// roman numeral to integer conversion
+
+var romanToInt = function(s) {
+    const romanValues = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    };
+
+    let total = 0;
+
+    for (let i = 0; i < s.length; i++) {
+        let currentVal = romanValues[s[i]];
+        let nextVal = romanValues[s[i + 1]];
+
+        if (nextVal > currentVal) {
+            total -= currentVal;
+        } else {
+            total += currentVal;
+        }
+    }
+
+    return total;
+};

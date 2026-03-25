@@ -29,3 +29,6 @@ console.log("10" * "2");
 console.log(0 == false);
 console.log(0 === false);
 // These outputs occur due to JavaScript’s implicit type coercion and operator behavior.
+
+
+
