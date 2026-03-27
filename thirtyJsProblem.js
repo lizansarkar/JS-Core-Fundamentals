@@ -152,3 +152,37 @@ var romanToInt = function(s) {
 
     return total;
 };
+
+// *********** Problem: 13
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
+var maxArea = function(height) {
+    let maxArea = 0;
+    let left = 0;
+    let right = height.length - 1;
+
+    while (left < right) {
+        // দুটি দেয়ালের মধ্যে ছোট উচ্চতাটি নিতে হবে
+        let currentHeight = Math.min(height[left], height[right]);
+        
+        // বর্তমান চওড়া বা দূরত্ব
+        let width = right - left;
+        
+        // এরিয়া হিসাব করা
+        let currentArea = currentHeight * width;
+        
+        // যদি বর্তমান এরিয়া আগের সর্বোচ্চ এরিয়ার চেয়ে বড় হয়
+        maxArea = Math.max(maxArea, currentArea);
+
+        // যে দেয়ালটি ছোট, সেটিকে সরাবো
+        if (height[left] < height[right]) {
+            left++;
+        } else {
+            right--;
+        }
+    }
+
+    return maxArea;
+};
